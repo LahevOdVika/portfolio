@@ -1,0 +1,86 @@
+:root {
+    --bg-light: #1A1F36;
+    --bg-dark: #121212;
+    --primary: #007777;
+    --primary-light: #2A7CA6;
+    --secondary: #FF8C42;
+    --text: #E5E5E5;
+    --text-title: #FFFFFF;
+    --card-bg: #222835;
+    --page-inline-padding: 5%;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Ubuntu Mono", Ubuntu, monospace;
+    color: var(--text);
+    background-image: linear-gradient(to right bottom, var(--bg-dark) 20%, var(--bg-light) 80%);
+    background-attachment: fixed;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--text-title);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    padding: .5rem 2rem;
+    font-size: 3ch;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 5px;
+    color: inherit;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-light);
+}
+
+.card {
+    --padding: 1rem;
+    --border-radius: 10px;
+
+    max-width: fit-content;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    text-align: center;
+    box-shadow: -4px -4px 10px rgba(72, 66, 66, 0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .2s linear;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    border-radius: 10px;
+}

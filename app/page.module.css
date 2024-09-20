@@ -1,0 +1,55 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.links ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    padding-inline: var(--page-inline-padding);
+}
+
+.welcome > div {
+    flex-basis: 100%;
+}
+
+.welcome div:nth-child(2) {
+    text-align: center;
+}
+
+.gridSystemWrapper {
+    margin-block: auto;
+    text-align: center;
+}
+
+.gridSystem {
+    display: flex;
+    padding-inline: var(--page-inline-padding);
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-block: 2rem;
+}
+
+.technology {
+    text-align: center;
+    margin-block: 2%;
+}
+
+.technology > div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-block: 2rem;
+}
+
+.technology .card {
+    flex: revert;
+}

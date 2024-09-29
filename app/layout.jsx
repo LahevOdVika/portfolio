@@ -1,24 +1,28 @@
 import './global.css';
-import styles from "@/app/page.module.css";
-import Link from "next/link";
-export default function RootLayout({ children }) {
+
+export default function RootLayout({children}) {
     return <>
-        <html lang="en">
-        <body>
-        <nav className={styles.navigation}>
-            <div className="copyright">
-                &copy;Michal Budai 2024
-            </div>
-            <div className={styles.links}>
-                <ul>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/contact">My Work</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
-                </ul>
-            </div>
-        </nav>
-        {children}
-        </body>
+        <html>
+            <head>
+                <title>My App</title>
+                <meta name={"description"} content={"My app description"} />
+                <meta name={"viewport"} content={"width=device-width, initial-scale=1"} />
+            </head>
+            <body>
+            <nav>
+                <div className="copyright">
+                    &copy; 2024 Michal Budai
+                </div>
+                <div className="menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/work">My Work</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            {children}
+            </body>
         </html>
     </>
 }

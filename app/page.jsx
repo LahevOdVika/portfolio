@@ -30,13 +30,11 @@ export default function Page() {
         </div>
         <section className={styles.timeline}>
             <img src="Timeline.svg" alt="Timeline"/>
-            <div className="sections">
-                <div className="code">
-                    Code
-                </div>
-                <div className="tools">
-                    Tools
-                </div>
+            <div className={styles.code}>
+                I code everything myself, no website builders, no ai builders
+            </div>
+            <div className={styles.tools}>
+                Using only the best tools on the market
             </div>
         </section>
     </>

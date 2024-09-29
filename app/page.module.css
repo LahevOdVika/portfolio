@@ -44,5 +44,22 @@
 
 .timeline {
     display: flex;
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
 
+.timeline .code {
+    position: absolute;
+    top: 528px;
+    left: 48px;
+    margin-left: 1rem;
+}
+
+.timeline .tools {
+    position: absolute;
+    top: 1127px;
+    left: 48px;
+    margin-left: 1rem;
 }

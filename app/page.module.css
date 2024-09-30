@@ -42,24 +42,29 @@
     animation-play-state: paused;
 }
 
-.timeline {
+.timelineSection {
     display: flex;
-    position: relative;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    align-items: center;
 }
 
-.timeline .code {
-    position: absolute;
-    top: 528px;
-    left: 48px;
-    margin-left: 1rem;
+.timelinePart {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    margin-top: 33px;
 }
 
-.timeline .tools {
-    position: absolute;
-    top: 1127px;
-    left: 48px;
-    margin-left: 1rem;
+.timelinePart img {
+    max-height: 300px;
+}
+
+.timelineContent {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.timelineContent img {
+    width: 300px;
 }

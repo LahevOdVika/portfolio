@@ -29,12 +29,30 @@ export default function Page() {
             </div>
         </div>
         <section className={styles.timeline}>
-            <img src="Timeline.svg" alt="Timeline"/>
-            <div className={styles.code}>
-                I code everything myself, no website builders, no ai builders
+            <div className={styles.timelineSection}>
+                <div className={styles.timelinePart}>
+                    <img src="/timeline/LineTop.svg" alt="Top"/>
+                </div>
             </div>
-            <div className={styles.tools}>
-                Using only the best tools on the market
+            <div className={styles.timelineSection}>
+                <div className={styles.timelinePart}>
+                    <img src="/timeline/Code.svg" alt="Code"/>
+                    <img src="/timeline/LineMiddle.svg" alt="Middle"/>
+                </div>
+                <div className={styles.timelineContent}>
+                    <img src="/timeline/Langs.svg" alt="Langs"/>
+                    I code everything myself, no website builders, no ai builders
+                </div>
+            </div>
+            <div className={styles.timelineSection}>
+                <div className={styles.timelinePart}>
+                    <img src="/timeline/Terminal.svg" alt="Terminal"/>
+                    <img src="/timeline/LineBottom.svg" alt="Bottom"/>
+                </div>
+                <div className={styles.timelineContent}>
+                    <img src="/timeline/Utils.svg" alt="Utils"/>
+                    Using only the best tools on the market
+                </div>
             </div>
         </section>
     </>

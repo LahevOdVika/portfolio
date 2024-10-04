@@ -43,8 +43,8 @@
 }
 
 .timelineSection {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 48px 1fr;
 }
 
 .timelinePart {

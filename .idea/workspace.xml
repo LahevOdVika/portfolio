@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Added text to timeline, working on effects">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Added text to timeline, working on effects" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +49,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/home/lahev/PhpstormProjects/next",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -113,6 +112,7 @@
       <workItem from="1726845406453" duration="9988000" />
       <workItem from="1727635469354" duration="41000" />
       <workItem from="1727635530445" duration="5208000" />
+      <workItem from="1728076779306" duration="190000" />
     </task>
     <task id="LOCAL-00001" summary="Remade ui, added nav, main, infinite scroll for projects, working on timeline">
       <option name="closed" value="true" />

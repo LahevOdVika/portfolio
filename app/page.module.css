@@ -8,7 +8,7 @@
 }
 
 .welcome img {
-    height: 600px;
+    height: 800px;
 }
 
 .welcome h1 {
@@ -45,6 +45,24 @@
 .timelineSection {
     display: grid;
     grid-template-columns: 48px 1fr;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+
+.timelineSection img[alt="Line"] {
+    transform: scaleY(0);
+    transition: all .8s ease-in-out;
+    transform-origin: top;
+    opacity: 0;
+}
+
+.animate {
+    opacity: 1;
+}
+
+.animate img[alt="Line"] {
+    transform: scaleY(1);
+    opacity: 1;
 }
 
 .timelinePart {
@@ -63,6 +81,7 @@
     align-items: center;
     font-size: 50px;
     font-weight: 600;
+    gap: 2rem;
 }
 
 .timelineContent img {

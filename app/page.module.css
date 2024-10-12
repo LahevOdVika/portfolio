@@ -1,5 +1,6 @@
 .welcome {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
     align-items: center;
 }
 
@@ -8,7 +9,7 @@
 }
 
 .welcome img {
-    height: 800px;
+    max-height: 800px;
 }
 
 .welcome h1 {
@@ -36,6 +37,7 @@
     animation: scroll 10s linear infinite;
     display: flex;
     flex-shrink: 0;
+    max-height: 200px;
 }
 
 .cards:hover .cardSlider {
@@ -86,4 +88,40 @@
 
 .timelineContent img {
     width: 300px;
+}
+
+@media only screen and (width <= 800px) {
+    .welcome {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .welcome h1 {
+        font-size: 3rem;
+    }
+
+    .cards {
+        margin: 0;
+        width: 100%;
+        mask: none;
+    }
+
+    .cardSlider {
+        height: clamp(100px, 150px, 20vh);
+    }
+
+    .timelineSection {
+        grid-template-columns: 1fr;
+        margin-block: 1rem;
+    }
+
+    .timelinePart {
+        display: none;
+    }
+
+    .timelineContent {
+        flex-direction: column;
+        text-align: center;
+        font-size: 30px;
+    }
 }

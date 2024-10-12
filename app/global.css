@@ -64,3 +64,12 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+
+@media only screen and (width <= 800px) {
+    body {
+        padding: 10px 20px;
+    }
+    nav {
+        font-size: 13px;
+    }
+}

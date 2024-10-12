@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.2.13",
+    "puppeteer": "^23.5.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.13"
+    "react-responsive": "^10.0.0"
   },
   "devDependencies": {
     "eslint": "^8",

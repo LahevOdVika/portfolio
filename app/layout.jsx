@@ -1,4 +1,5 @@
 import './global.css';
+import Link from "next/link";
 
 export default function RootLayout({children}) {
     return <>
@@ -15,9 +16,9 @@ export default function RootLayout({children}) {
                 </div>
                 <div className="menu">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/work">My Work</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><Link href="/">Home</Link></li>
+                        <li><Link href="/work">My Work</Link></li>
+                        <li><Link href="/contact">Contact</Link></li>
                     </ul>
                 </div>
             </nav>

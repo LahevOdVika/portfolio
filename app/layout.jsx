@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function RootLayout({children}) {
     return <>
-        <html>
+        <html lang={"en"}>
             <head>
                 <title>Michal Budai</title>
                 <meta name={"description"} content={"Are you looking for a good quality webapp for low price? Well you are in the right place."} />

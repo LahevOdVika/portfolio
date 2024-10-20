@@ -36,7 +36,6 @@
 .cardSlider {
     animation: scroll 10s linear infinite;
     display: flex;
-    flex-shrink: 0;
     max-height: 200px;
 }
 
@@ -88,6 +87,7 @@
 
 .timelineContent img {
     width: 300px;
+    height: min-content;
 }
 
 @media only screen and (width <= 800px) {
@@ -104,10 +104,12 @@
         margin: 0;
         width: 100%;
         mask: none;
+        overflow: scroll;
     }
 
     .cardSlider {
         height: clamp(100px, 150px, 20vh);
+        animation: none;
     }
 
     .timelineSection {

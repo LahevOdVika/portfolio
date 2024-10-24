@@ -1,6 +1,6 @@
 'use client'
 
-import styles from "@/app/page.module.css";
+import styles from "@/app/(home)/page.module.css";
 import Image from "next/image";
 import {useEffect, useRef} from "react";
 

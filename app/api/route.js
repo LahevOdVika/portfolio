@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import * as fs from "node:fs";
+import mysql from "mysql2/promise";
 
 async function generateThumbnail(url, address) {
     const browser = await puppeteer.launch();
@@ -42,13 +43,39 @@ async function generateThumbnail(url, address) {
     await page.screenshot({ path: filepath, clip });
 
     await browser.close();
+
+    return filepath;
+}
+
+const db = await mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
+});
+
+async function addProjectToDatabase(address, imageFilePath, description) {
+    const query = `INSERT INTO projects (address, image_path, description) VALUES (?, ?, ?)`;
+
+    try {
+        await db.query(query, [address, imageFilePath, description]);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 export async function POST(request) {
     const address = request.headers.get('address');
-    console.log(address);
+    const description = request.headers.get('description');
 
-    await generateThumbnail(`https://${address}`, `${address}`);
+    console.log(address);
+    console.log(description);
+
+    const filepath = await generateThumbnail(`https://${address}`, `${address}`);
+
+    await addProjectToDatabase(address, filepath, description);
 
     return new Response(200);
 }
+
+export async function GET(request) {}

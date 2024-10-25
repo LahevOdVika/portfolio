@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Working on mobile optimalization">
+    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Added missing image.png file">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app-paths-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app-paths-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/server-reference-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/server-reference-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/server-reference-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/server-reference-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/( components)/button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/( components)/card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/( components)/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/card.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/(home_components)/card-carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/(home_components)/card-carousel.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +72,8 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "npm.build.executor": "Debug",
-    "npm.dev.executor": "Debug",
-    "ts.external.directory.path": "/snap/phpstorm/436/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "npm.dev.executor": "Run",
+    "ts.external.directory.path": "C:\\Users\\Lahev\\AppData\\Local\\Programs\\PhpStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -121,8 +129,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23339.16" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23339.16" />
       </set>
     </attachedChunks>
   </component>
@@ -152,6 +160,7 @@
       <workItem from="1729774996458" duration="2336000" />
       <workItem from="1729779573575" duration="4788000" />
       <workItem from="1729841724687" duration="2643000" />
+      <workItem from="1729874517309" duration="954000" />
     </task>
     <task id="LOCAL-00001" summary="Remade ui, added nav, main, infinite scroll for projects, working on timeline">
       <option name="closed" value="true" />

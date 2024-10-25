@@ -1,7 +1,7 @@
 "use client"
 
 import styles from "@/app/(home)/page.module.css";
-import Card from "@/app/( components)/card";
+import Card from "@/app/(components)/card";
 
 export default function CardCarousel() {
     return <>

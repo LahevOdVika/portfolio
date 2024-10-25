@@ -1,8 +1,7 @@
-import mysql from 'mysql2/promise'
 import puppeteer from "puppeteer";
 import * as fs from "node:fs";
 
-async function generateThumbnail(url, thumbnailName) {
+async function generateThumbnail(url, address) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle2' });
@@ -25,25 +24,31 @@ async function generateThumbnail(url, thumbnailName) {
         };
     });
 
-    const defaultDirectory = '/public/thumbnails/';
+    const date = new Date();
 
-    fs.access(`${defaultDirectory}${thumbnailName}`, fs.constants.F_OK, (err) => {
-        const date = new Date().getDate();
-        const filename = `${thumbnailName}-${date}`;
+    const defaultDirectory = 'thumbnails/';
+    const dir = `${defaultDirectory}${address}`;
 
+    const filename = `${address}-${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}.png`;
+    let filepath = `${dir}/${filename}`;
 
-    })
+    if (!fs.existsSync(`${defaultDirectory}${address}`)) {
+        fs.mkdirSync(dir, {recursive: true});
+        console.log("Doesn't exist");
+    } else {
+        console.log("Does exist");
+    }
 
-    await page.screenshot({ path: thumbnailPath, clip });
+    await page.screenshot({ path: filepath, clip });
 
     await browser.close();
 }
 
 export async function POST(request) {
-    const name = request.headers.get('name');
-    console.log(name);
+    const address = request.headers.get('address');
+    console.log(address);
 
-    generateThumbnail('https://studio-am.cz', 'thumbnail.png');
+    await generateThumbnail(`https://${address}`, `${address}`);
 
     return new Response(200);
 }

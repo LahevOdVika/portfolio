@@ -3,7 +3,19 @@ import Image from 'next/image'
 import Timeline from "@/app/(home)/(home_components)/timeline";
 import CardCarousel from "@/app/(home)/(home_components)/card-carousel";
 
-export default function Page() {
+export default async function Page() {
+
+    const projects = await fetch('http://localhost:3000/api')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            } else
+                return response.json();
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
+
     return <>
             <main className={styles.welcome}>
                 <div className="container">
@@ -18,7 +30,7 @@ export default function Page() {
                     priority={true}
                 />
             </main>
-            <CardCarousel />
+            <CardCarousel projects={projects}/>
             <Timeline />
     </>
 }

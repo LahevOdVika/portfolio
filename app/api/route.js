@@ -78,4 +78,13 @@ export async function POST(request) {
     return new Response(200);
 }
 
-export async function GET(request) {}
+export async function GET() {
+    const query = `SELECT * FROM projects ORDER BY ID DESC LIMIT 6`;
+
+    try {
+        const [result] = await db.query(query);
+        return new Response(JSON.stringify(result));
+    } catch (e) {
+        console.error(e);
+    }
+}

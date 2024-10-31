@@ -55,7 +55,7 @@ jobs:
       - name: Wait for MySQL to be ready
         run: |
           echo "Waiting for MySQL to be ready..."
-          until mysqladmin ping -h 127.0.0.1 -u root --password=root_password; do
+          until mysqladmin ping -h localhost -u root --password=root_password; do
             sleep 5
           done
           echo "MySQL is ready!"

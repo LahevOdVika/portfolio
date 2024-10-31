@@ -32,23 +32,23 @@ jobs:
 # Build job
   build:
     runs-on: ubuntu-latest
-    services:
-      mysql:
-        image: mysql:latest
-        ports:
-          - 3306/tcp
-        env:
-          MYSQL_ROOT_PASSWORD: root_password
-          MYSQL_DATABASE: projects-database
-          MYSQL_USER: lahev
-          MYSQL_PASSWORD: user_password
-        options: >-
-          --name=mysql
-          --health-cmd="mysqladmin ping"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
     steps: 
+      - name: MySQL Deploy Action
+        uses: calxus/mysql-deploy-action@v2
+        with:
+          # Hostname used to connect to database
+          DATABASE_HOST: localhost
+          # Port used to connect to database
+          DATABASE_PORT: 3306 # optional, default is 3306
+          # Name of database to connect to
+          DATABASE_NAME: projects-database
+          # Username used to connect to database
+          DATABASE_USERNAME: lahev
+          # Password used to connect to database
+          DATABASE_PASSWORD: user_password
+          # Script run on database
+          DATABASE_SCRIPT: sql/init.db
+    
       - name: Checkout code
         uses: actions/checkout@v2
 

@@ -3,11 +3,6 @@
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
 name: Deploy Next.js site to Pages
-env:
-  MYSQL_ROOT_PASSWORD: root_password
-  MYSQL_DATABASE: projects-database
-  MYSQL_USER: lahev
-  MYSQL_PASSWORD: user_password
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -47,7 +42,7 @@ jobs:
           # Password used to connect to database
           DATABASE_PASSWORD: user_password
           # Script run on database
-          DATABASE_SCRIPT: sql/init.db
+          DATABASE_SCRIPT: init.db
     
       - name: Checkout code
         uses: actions/checkout@v2

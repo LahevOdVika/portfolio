@@ -42,7 +42,7 @@ jobs:
           # Password used to connect to database
           DATABASE_PASSWORD: user_password
           # Script run on database
-          DATABASE_SCRIPT: init.db
+          DATABASE_SCRIPT: init.sql
     
       - name: Checkout code
         uses: actions/checkout@v2

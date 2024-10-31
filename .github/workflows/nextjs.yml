@@ -3,7 +3,11 @@
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
 name: Deploy Next.js site to Pages
-
+env:
+  MYSQL_ROOT_PASSWORD: root_password
+  MYSQL_DATABASE: projects-database
+  MYSQL_USER: lahev
+  MYSQL_PASSWORD: user_password
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -28,19 +32,23 @@ jobs:
 # Build job
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Setup MySQL
-        uses: mirromutth/mysql-action@v1.1
-        with:
-          # MYSQL_ROOT_PASSWORD - root superuser password
-          mysql root password: root_password
-          # MYSQL_DATABASE - name for the default database that is created
-          mysql database: projects-database # optional, default is 
-          # MYSQL_USER - create the specified user with superuser power for created database
-          mysql user: lahev # optional, default is 
-          # MYSQL_PASSWORD - specified superuser password which user is power for created database
-          mysql password: user_password # optional, default is 
-
+    services:
+      mysql:
+        image: mysql:latest
+        ports:
+          - 3306/tcp
+        env:
+          MYSQL_ROOT_PASSWORD: root_password
+          MYSQL_DATABASE: projects-database
+          MYSQL_USER: lahev
+          MYSQL_PASSWORD: user_password
+        options: >-
+          --name=mysql
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+    steps: 
       - name: Checkout code
         uses: actions/checkout@v2
 

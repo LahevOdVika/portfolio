@@ -28,24 +28,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
-      - name: MySQL Deploy Action
-        uses: calxus/mysql-deploy-action@v2
-        with:
-          # Hostname used to connect to database
-          DATABASE_HOST: localhost
-          # Port used to connect to database
-          DATABASE_PORT: 3306 # optional, default is 3306
-          # Name of database to connect to
-          DATABASE_NAME: projects-database
-          # Username used to connect to database
-          DATABASE_USERNAME: lahev
-          # Password used to connect to database
-          DATABASE_PASSWORD: user_password
-          # Script run on database
-          DATABASE_SCRIPT: sql/init.sql
-    
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Run MySQL container
+        run: docker compose up -d
 
       - name: Wait for MySQL to be ready
         run: |

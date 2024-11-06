@@ -1,6 +1,7 @@
 import puppeteer from "puppeteer";
 import * as fs from "node:fs";
 import mysql from "mysql2/promise";
+import { NextResponse } from "next/server";
 
 async function generateThumbnail(url, address) {
     const browser = await puppeteer.launch();
@@ -55,12 +56,25 @@ const db = await mysql.createConnection({
 });
 
 async function addProjectToDatabase(address, imageFilePath, description) {
-    const query = `INSERT INTO projects (address, image_path, description) VALUES (?, ?, ?)`;
+    const checkQuery = `SELECT * FROM projects WHERE address = ?`;
+    const insertQuery = `INSERT INTO projects (address, image_path, description) VALUES (?, ?, ?)`;
+    const updateQuery = `UPDATE projects SET image_path = ?, description = ? WHERE address = ?`;
 
-    try {
-        await db.query(query, [address, imageFilePath, description]);
-    } catch (error) {
-        console.error(error);
+    const [rows] = await db.query(checkQuery, [address]);
+    if (rows.length > 0) {
+        console.log("Project already exists");
+        try {
+            await db.query(updateQuery, [imageFilePath, description, address]);
+        } catch (error) {
+            console.error(error);
+        }
+    } else {
+        console.log("Creating new project");
+        try {
+            await db.query(insertQuery, [address, imageFilePath, description]);
+        } catch (error) {
+            console.error(error);
+        }
     }
 }
 
@@ -83,7 +97,7 @@ export async function GET() {
 
     try {
         const [result] = await db.query(query);
-        return new Response(JSON.stringify(result));
+        return NextResponse.json(result);
     } catch (e) {
         console.error(e);
     }

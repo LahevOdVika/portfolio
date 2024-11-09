@@ -56,9 +56,9 @@ const db = await mysql.createConnection({
 });
 
 async function addProjectToDatabase(address, imageFilePath, description) {
-    const checkQuery = `SELECT * FROM projects WHERE address = ?`;
-    const insertQuery = `INSERT INTO projects (address, image_path, description) VALUES (?, ?, ?)`;
-    const updateQuery = `UPDATE projects SET image_path = ?, description = ? WHERE address = ?`;
+    const checkQuery = "SELECT * FROM projects WHERE address = ?";
+    const insertQuery = "INSERT INTO projects (address, image_path, description) VALUES (?, ?, ?)";
+    const updateQuery = "UPDATE projects SET image_path = ?, description = ? WHERE address = ?";
 
     const [rows] = await db.query(checkQuery, [address]);
     if (rows.length > 0) {
@@ -93,7 +93,7 @@ export async function POST(request) {
 }
 
 export async function GET() {
-    const query = `SELECT * FROM projects ORDER BY ID DESC LIMIT 6`;
+    const query = "SELECT * FROM projects ORDER BY ID DESC LIMIT 6";
 
     try {
         const [result] = await db.query(query);

@@ -37,12 +37,12 @@ export default function Facts() {
                 entity.current.textContent = entity.current.dataset.text;
             });
         }
+        return null;
     }, []);
 
 
 
-    return <>
-        <section>
+    return <section>
             <div className={styles.facts} ref={firstRef}>
                 <Image
                     src="/timeline/Langs.svg"
@@ -68,5 +68,4 @@ export default function Facts() {
                 </p>
             </div>
         </section>
-    </>
 }

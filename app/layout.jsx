@@ -13,8 +13,7 @@ config.autoAddCss = false
 
 
 export default function RootLayout({children}) {
-    return <>
-        <html lang={"en"}>
+    return <html lang={"en"}>
             <body>
             <header>
                 <div className="copyright">
@@ -25,5 +24,4 @@ export default function RootLayout({children}) {
             {children}
             </body>
         </html>
-    </>
 }

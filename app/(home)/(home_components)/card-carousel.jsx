@@ -14,18 +14,15 @@ export default function CardCarousel({projects}) {
 
     if (projects.length > 0) {
         if (isMobile) {
-            return <>
-                <section className={styles.cards}>
+            return <section className={styles.cards}>
                     {projects.map(project => {
                         return <Card key={project.ID} imageUrl={project.image_path} imageAlt={project.address}
                                      header={project.address}
                                      text={project.description}></Card>
                     })}
                 </section>
-            </>
         } else {
-            return <>
-                <section className={styles.cards}>
+            return <section className={styles.cards}>
                     <div className={styles.cardSlider}>
                         {projects.map(project => {
                             return <Card key={project.ID} imageUrl={project.image_path} imageAlt={project.address}
@@ -34,11 +31,8 @@ export default function CardCarousel({projects}) {
                         })}
                     </div>
                 </section>
-            </>
         }
     } else {
-        return <>
-            <h2 style={{textAlign: "center"}}>Loading.....</h2>
-        </>
+        return <h2 style={{textAlign: "center"}}>Loading.....</h2>
     }
 }

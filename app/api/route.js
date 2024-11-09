@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer";
-import * as fs from "node:fs";
+import fs from "node:fs";
 import mysql from "mysql2/promise";
 import { NextResponse } from "next/server";
 
@@ -28,11 +28,11 @@ async function generateThumbnail(url, address) {
 
     const date = new Date();
 
-    const defaultDirectory = 'thumbnails/';
+    const defaultDirectory = '/thumbnails/';
     const dir = `${defaultDirectory}${address}`;
 
     const filename = `${address}-${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}.png`;
-    let filepath = `${dir}/${filename}`;
+    const filepath = `${dir}/${filename}`;
 
     if (fs.existsSync(`public/${dir}`)) {
         console.log("Does exist");

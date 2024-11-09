@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Got rid of timeline">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(home)/(home_components)/facts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/(home_components)/facts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(components)/button.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(components)/card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/(home_components)/card-carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/(home_components)/card-carousel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/(home_components)/navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/(home_components)/navigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/contact/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/contact/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +67,7 @@
   "keyToString": {
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "deepsource-autofix-dc5884e3",
+    "git-widget-placeholder": "fixes",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/home/lahev/Desktop/portfolio",
     "list.type.of.created.stylesheet": "CSS",
@@ -160,9 +166,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>

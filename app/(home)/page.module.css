@@ -105,11 +105,8 @@
         width: 100%;
         mask: none;
         overflow: scroll;
-    }
-
-    .cardSlider {
-        height: clamp(100px, 150px, 20vh);
-        animation: none;
+        gap: 1rem;
+        scroll-snap-type: x mandatory;
     }
 
     .timelineSection {

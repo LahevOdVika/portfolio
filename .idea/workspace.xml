@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Updated docker-compose.yml">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/nextjs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/nextjs.yml" afterDir="false" />
+    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Fixed card component, working on mobile navigation bar">
+      <change afterPath="$PROJECT_DIR$/app/(home)/(home_components)/navigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app-paths-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app-paths-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/server-reference-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/server-reference-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/server-reference-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/server-reference-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(components)/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/card.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/(home_components)/card-carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/(home_components)/card-carousel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +62,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Docker.docker-compose.yml.mysql: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/home/lahev/PhpstormProjects/next",
+    "last_opened_file_path": "/home/lahev/Desktop/portfolio",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -74,6 +85,15 @@
     ]
   }
 }]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -136,8 +156,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
       <item itemvalue="npm.dev" />
       <item itemvalue="npm.build" />
     </list>
@@ -184,7 +204,9 @@
       <workItem from="1729779573575" duration="4788000" />
       <workItem from="1729841724687" duration="2643000" />
       <workItem from="1729874517309" duration="954000" />
-      <workItem from="1730409931146" duration="2579000" />
+      <workItem from="1731001731941" duration="39000" />
+      <workItem from="1731108467003" duration="22000" />
+      <workItem from="1731108506501" duration="2807000" />
     </task>
     <task id="LOCAL-00001" summary="Remade ui, added nav, main, infinite scroll for projects, working on timeline">
       <option name="closed" value="true" />
@@ -256,6 +278,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remade ui, added nav, main, infinite scroll for projects, working on timeline" />
     <MESSAGE value="Added text to timeline, working on effects" />
@@ -265,6 +290,7 @@
     <MESSAGE value="Modified docker compose" />
     <MESSAGE value="Adding automatic database generation" />
     <MESSAGE value="Updated docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated docker-compose.yml" />
+    <MESSAGE value="Fixed card component, working on mobile navigation bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed card component, working on mobile navigation bar" />
   </component>
 </project>

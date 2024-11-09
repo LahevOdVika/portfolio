@@ -34,14 +34,14 @@ async function generateThumbnail(url, address) {
     const filename = `${address}-${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}.png`;
     let filepath = `${dir}/${filename}`;
 
-    if (!fs.existsSync(`${defaultDirectory}${address}`)) {
-        fs.mkdirSync(dir, {recursive: true});
-        console.log("Doesn't exist");
-    } else {
+    if (fs.existsSync(`public/${dir}`)) {
         console.log("Does exist");
+    } else {
+        fs.mkdirSync(`public/${dir}`, {recursive: true});
+        console.log("Doesn't exist");
     }
 
-    await page.screenshot({ path: filepath, clip });
+    await page.screenshot({ path: `public/${filepath}`, clip });
 
     await browser.close();
 
@@ -86,7 +86,7 @@ export async function POST(request) {
     console.log(description);
 
     const filepath = await generateThumbnail(`https://${address}`, `${address}`);
-
+    console.log(filepath);
     await addProjectToDatabase(address, filepath, description);
 
     return new Response(200);

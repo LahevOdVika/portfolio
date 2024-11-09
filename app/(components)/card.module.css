@@ -12,6 +12,8 @@
     flex-shrink: 0;
     height: 100%;
     min-width: 500px;
+    box-sizing: border-box;
+    scroll-snap-align: center;
 }
 
 .cardImg {
@@ -59,12 +61,17 @@
 
 @media only screen and (width <= 800px) {
     .card {
-        min-width: 10%;
+        flex-direction: column;
+        min-width: 100%;
+        margin: 0;
+        align-items: start;
+        flex-shrink: 1;
     }
-    .cardBody {
-        margin-block: 0;
+    .card:hover {
+        transform: none;
+        border: var(--primary) solid 2px;
     }
-    .cardTitle {
-        font-size: 1.5rem;
+    .cardImg {
+        border-radius: 10px 10px 0 0;
     }
 }

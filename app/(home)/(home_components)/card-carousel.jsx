@@ -19,7 +19,7 @@ export default function CardCarousel({projects}) {
                     {projects.map(project => {
                         return <Card key={project.ID} imageUrl={project.image_path} imageAlt={project.address}
                                      header={project.address}
-                                     text={project.description}></Card>
+                                     text={project.description} />
                     })}
                 </section>
             </>
@@ -30,7 +30,7 @@ export default function CardCarousel({projects}) {
                         {projects.map(project => {
                             return <Card key={project.ID} imageUrl={project.image_path} imageAlt={project.address}
                                          header={project.address}
-                                         text={project.description}></Card>
+                                         text={project.description} />
                         })}
                     </div>
                 </section>

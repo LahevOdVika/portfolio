@@ -62,11 +62,11 @@ export default function Timeline() {
         <section>
             <div className={styles.timelineSection} ref={firstRef} data-text={"I code everything myself, no website builders, no AI builders"}>
                 <div className={styles.timelinePart}>
-                    <img src="/timeline/Code.svg" alt="Svg code icon" width={"auto"} height={"auto"} aria-hidden={true}/>
-                    <img src="/timeline/LineMiddle.svg" alt="Svg line spacer" width={"auto"} height={"auto"} aria-hidden={true}/>
+                    <img src="/timeline/Code.svg" alt="Svg code icon" width={"auto"} height={"auto"} aria-hidden/>
+                    <img src="/timeline/LineMiddle.svg" alt="Svg line spacer" width={"auto"} height={"auto"} aria-hidden/>
                 </div>
                 <div className={styles.timelineContent}>
-                    <img src="/timeline/Langs.svg" alt="Programming languages I use" width={"auto"} height={"auto"} aria-hidden={true}/>
+                    <img src="/timeline/Langs.svg" alt="Programming languages I use" width={"auto"} height={"auto"} aria-hidden/>
                     <span className={"typewriter"}>
 
                     </span>
@@ -74,8 +74,8 @@ export default function Timeline() {
             </div>
             <div className={styles.timelineSection} ref={secondRef} data-text={"Using only the best tools on the market"}>
                 <div className={styles.timelinePart}>
-                    <img src="/timeline/Terminal.svg" alt="Svg terminal icon" width={"auto"} height={"auto"} aria-hidden={true}/>
-                    <img src="/timeline/LineBottom.svg" alt="Svg line spacer" width={"auto"} height={"auto"} aria-hidden={true}/>
+                    <img src="/timeline/Terminal.svg" alt="Svg terminal icon" width={"auto"} height={"auto"} aria-hidden/>
+                    <img src="/timeline/LineBottom.svg" alt="Svg line spacer" width={"auto"} height={"auto"} aria-hidden/>
                 </div>
                 <div className={styles.timelineContent}>
                     <Image
@@ -83,7 +83,7 @@ export default function Timeline() {
                         alt="Programs I use to code"
                         width={502}
                         height={470}
-                        aria-hidden={true}
+                        aria-hidden
                     />
                     <span className="typewriter">
 

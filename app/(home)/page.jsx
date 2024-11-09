@@ -27,7 +27,7 @@ export default async function Page() {
                     alt="Welcome image"
                     width={500}
                     height={500}
-                    priority={true}
+                    priority
                 />
             </main>
             <CardCarousel projects={projects}/>

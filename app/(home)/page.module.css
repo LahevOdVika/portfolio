@@ -43,20 +43,6 @@
     animation-play-state: paused;
 }
 
-.timelineSection {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    transition: all 1s ease-in-out;
-    opacity: 0;
-}
-
-.timelineSection img[alt="Line"] {
-    transform: scaleY(0);
-    transition: all .8s ease-in-out;
-    transform-origin: top;
-    opacity: 0;
-}
-
 .animate {
     opacity: 1;
 }
@@ -66,29 +52,6 @@
     opacity: 1;
 }
 
-.timelinePart {
-    display: flex;
-    flex-direction: column;
-    gap: 33px;
-    margin-top: 33px;
-}
-
-.timelinePart img {
-    max-height: 300px;
-}
-
-.timelineContent {
-    display: flex;
-    align-items: center;
-    font-size: 50px;
-    font-weight: 600;
-    gap: 2rem;
-}
-
-.timelineContent img {
-    width: 300px;
-    height: min-content;
-}
 
 @media only screen and (width <= 800px) {
     .welcome {
@@ -107,20 +70,5 @@
         overflow: scroll;
         gap: 1rem;
         scroll-snap-type: x mandatory;
-    }
-
-    .timelineSection {
-        grid-template-columns: 1fr;
-        margin-block: 1rem;
-    }
-
-    .timelinePart {
-        display: none;
-    }
-
-    .timelineContent {
-        flex-direction: column;
-        text-align: center;
-        font-size: 30px;
     }
 }

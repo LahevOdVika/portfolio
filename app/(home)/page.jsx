@@ -1,6 +1,6 @@
 import styles from './page.module.css';
 import Image from 'next/image'
-import Timeline from "@/app/(home)/(home_components)/timeline";
+import Facts from "@/app/(home)/(home_components)/facts";
 import CardCarousel from "@/app/(home)/(home_components)/card-carousel";
 
 export default async function Page() {
@@ -31,6 +31,6 @@ export default async function Page() {
                 />
             </main>
             <CardCarousel projects={projects}/>
-            <Timeline />
+            <Facts />
     </>
 }

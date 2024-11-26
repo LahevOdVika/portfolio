@@ -3,6 +3,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import {useState} from "react";
+import {faBars, faX} from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation() {
 

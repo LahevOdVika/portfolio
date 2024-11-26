@@ -1,5 +1,7 @@
 # Ignore all directories starting with "."
 .*
+@*
 
 # Ignore the /public/thumbnails directory
 /public/thumbnails
+/init/init.sql

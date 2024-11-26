@@ -6,9 +6,14 @@ export default function Card({imageUrl, imageAlt, header, text}) {
         <Image
             src={imageUrl}
             alt={imageAlt}
-            width={1400}
-            height={900}
+            width={700}
+            height={450}
+            sizes="(max-width: 768px) 100vw, 700px"
+            quality={75}
             className={styles.cardImg}
+            onError={() => {
+                console.error(`Error loading image ${imageUrl}:`);
+            }}
         />
         <div className={styles.cardBody}>
             <h3 className={styles.cardTitle}>{header}</h3>

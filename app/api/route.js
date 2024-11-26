@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import fs from "node:fs";
+import path from "node:path";
 import db from './db';
 import {NextResponse} from "next/server";
 
@@ -16,16 +17,18 @@ async function generateThumbnail(url, address) {
 
     const date = new Date();
 
-    const defaultDirectory = '/thumbnails/';
-    const dir = `${defaultDirectory}${address}`;
+    const defaultDirectory = 'thumbnails';
+    const dir = path.join(defaultDirectory, address);
     const filename = `${address}-${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}.png`;
-    const filepath = `${dir}/${filename}`;
+    const filepath = path.join(dir, filename);
 
     if (!fs.existsSync(`public/${dir}`)) {
         await fs.promises.mkdir(`public/${dir}`, { recursive: true });
     }
 
-    await page.screenshot({path: `public/${filepath}`, clip});
+    const screenshotPath = path.join('public', filepath);
+    await page.screenshot({path: screenshotPath, clip});
+
     await browser.close();
     return filepath;
 }

@@ -31,7 +31,7 @@ async function generateThumbnail(url, address) {
 }
 
 async function addProjectToDatabase(address, imageFilePath, description) {
-    const query = `INSERT INTO projects (address, image_path, description) VALUES ($1, $2, $3) ON CONFLICT (address) DO UPDATE SET image_path = $2, description = $3`;
+    const query = 'INSERT INTO projects (address, image_path, description) VALUES ($1, $2, $3) ON CONFLICT (address) DO UPDATE SET image_path = $2, description = $3';
     try {
         await db.query(query, [address, imageFilePath, description]);
         console.log("Project added or updated successfully");
@@ -51,7 +51,7 @@ export async function POST(request) {
 }
 
 export async function GET() {
-    const query = `SELECT * FROM projects ORDER BY ID DESC LIMIT 6`;
+    const query = 'SELECT * FROM projects ORDER BY ID DESC LIMIT 6';
 
     try {
         const result = await db.query(query);

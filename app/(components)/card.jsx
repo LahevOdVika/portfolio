@@ -1,8 +1,8 @@
 import styles from './card.module.css';
 import Image from 'next/image'
 
-export default function Card({imageUrl, imageAlt, header, text}) {
-    return <div className={styles.card}>
+export default function Card({imageUrl, imageAlt, header, text, className}) {
+    return <div className={`${styles.card} ${className}`}>
         <div className={styles.cardImageWrapper}>
             <Image
                 src={imageUrl}

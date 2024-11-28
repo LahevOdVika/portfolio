@@ -7,13 +7,14 @@
     --text: #E5E5E5;
     --text-title: #FFFFFF;
     --card-hover-px: 20px;
+    --card-border-radius: 5px;
 
     box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
     box-sizing: border-box;
 }
 
@@ -23,7 +24,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: Ubuntu, "Ubuntu Mono", monospace;
-    padding: 20px 50px 0 50px;
+    padding: 10px 25px 0 25px;
     margin: 0;
     color: #f2f2f2 !important;
     font-size: 19px;
@@ -39,7 +40,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .menu {

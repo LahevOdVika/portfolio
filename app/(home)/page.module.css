@@ -13,7 +13,11 @@
 }
 
 .welcome h1 {
-    font-size: 5rem;
+    font-size: 4rem;
+}
+
+.welcome h2 {
+    font-size: 1.5rem;
 }
 
 @keyframes scroll {
@@ -26,17 +30,18 @@
 }
 
 .cards {
-    margin: 60px;
     overflow: hidden;
     display: flex;
-    mask: linear-gradient(90deg, transparent, white 50px, white calc(100% - 50px), transparent);
+    mask: linear-gradient(90deg, transparent, white 20px, white calc(100% - 20px), transparent);
     padding-bottom: var(--card-hover-px);
 }
 
 .cardSlider {
-    animation: scroll 10s linear infinite;
     display: flex;
-    max-height: 200px;
+}
+
+.cardSlider[data-animate=true] {
+    animation: scroll 10s linear infinite;
 }
 
 .cards:hover .cardSlider {
@@ -64,11 +69,9 @@
     }
 
     .cards {
-        margin: 0;
         width: 100%;
         mask: none;
         overflow: scroll;
-        gap: 1rem;
         scroll-snap-type: x mandatory;
     }
 }

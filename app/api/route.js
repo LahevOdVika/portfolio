@@ -17,16 +17,16 @@ async function generateThumbnail(url, address) {
 
     const date = new Date();
 
-    const defaultDirectory = 'thumbnails';
-    const dir = path.join(defaultDirectory, address);
+    const defaultDirectory = '/thumbnails';
+    const dir = path.posix.join(defaultDirectory, address);
     const filename = `${address}-${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}.png`;
-    const filepath = path.join(dir, filename);
+    const filepath = path.posix.join(dir, filename);
 
     if (!fs.existsSync(`public/${dir}`)) {
         await fs.promises.mkdir(`public/${dir}`, { recursive: true });
     }
 
-    const screenshotPath = path.join('public', filepath);
+    const screenshotPath = path.posix.join('public', filepath);
     await page.screenshot({path: screenshotPath, clip});
 
     await browser.close();

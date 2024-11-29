@@ -31,17 +31,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run MySQL container
-        run: docker compose up -d
+      - name: Setup PostgreSQL
+        uses: Harmon758/postgresql-action@v1.0.0
+        with:
+          postgresql version: "15.4" # Specify desired PostgreSQL version
+          postgresql db: ${{ secrets.POSTGRES_DB }}
+          postgresql user: ${{ secrets.POSTGRES_USER }}
+          postgresql password: ${{ secrets.POSTGRES_PASSWORD }}
 
-      - name: Wait for MySQL to be ready
-        run: |
-          echo "Waiting for MySQL to be ready..."
-          until docker exec mysql_container mysqladmin ping -u root --password=nejtezsiheslokdyvymysleno; do
-            sleep 5
-          done
-          echo "MySQL is ready!"
-    
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager

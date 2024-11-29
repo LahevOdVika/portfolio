@@ -34,7 +34,7 @@
     gap: 2rem;
 }
 
-.cardSlider[data-animate=true] {
+.cardSlider[data-animate] {
     animation: scroll 10s linear infinite;
 }
 

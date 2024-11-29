@@ -12,6 +12,7 @@ export default function Card({imageUrl, imageAlt, header, text, className}) {
                 sizes="(max-width: 768px) 100vw, 300px"
                 quality={75}
                 className={styles.cardImg}
+                // skipcq JS-0417
                 onError={() => {
                     console.error(`Error loading image ${imageUrl}:`);
                 }}

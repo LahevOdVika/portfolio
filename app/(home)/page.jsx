@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Facts from "@/app/(home)/(home_components)/facts";
 import CardCarousel from "@/app/(home)/(home_components)/card-carousel";
 
-export default async function Page() {
-
+export default function Page() {
+    // async
     /*const projects = await fetch('http://localhost:3000/api')
         .then(response => {
             if (!response.ok) {

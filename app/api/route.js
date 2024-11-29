@@ -23,8 +23,9 @@ async function generateThumbnail(url, address) {
     const filename = `${address}-${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}.png`;
     const filepath = path.posix.join(dir, filename);
 
-    if (!fs.existsSync(`public/${dir}`)) {
-        await fs.promises.mkdir(`public/${dir}`, { recursive: true });
+    const publicDir = path.join(proccess.cwd(), 'public', dir);
+    if (!fs.existsSync(publicDir)) {
+        await fs.promises.mkdir(publicDir, { recursive: true });
     }
 
     const screenshotPath = path.posix.join('public', filepath);

@@ -1,3 +1,4 @@
+/*
 import puppeteer from "puppeteer";
 import fs from "node:fs";
 import path from "node:path";
@@ -65,3 +66,4 @@ export async function GET() {
     }
 
 }
+*/

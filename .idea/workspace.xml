@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Adding .gitignore" />
+    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Adding .gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/route.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +167,7 @@
         <item itemvalue="npm.build" />
         <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="npm.build" />
         <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
       </list>
     </recent_temporary>

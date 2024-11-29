@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Got rid of timeline">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(home)/(home_components)/facts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/(home_components)/facts.jsx" afterDir="false" />
+    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Fixed few issues">
+      <change beforePath="$PROJECT_DIR$/app/(home)/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,8 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/LahevOdVika/portfolio.git&quot;,
     &quot;accountId&quot;: &quot;6e18c6df-3ee6-476f-9667-2ddeb09ba0fb&quot;
-  }
+  },
+  &quot;editorReviewEnabled&quot;: false
 }</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.3" />
   <component name="ProblemsViewState">
@@ -57,31 +57,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "deepsource-autofix-dc5884e3",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/home/lahev/Desktop/portfolio",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Debug",
-    "npm.dev.executor": "Run",
-    "ts.external.directory.path": "/snap/phpstorm/436/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#5 on fixes&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/lahev/Desktop/portfolio&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/443/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -160,17 +162,19 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
         <item itemvalue="npm.build" />
+        <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202" />
+        <option value="bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202" />
       </set>
     </attachedChunks>
   </component>
@@ -204,6 +208,8 @@
       <workItem from="1731001731941" duration="39000" />
       <workItem from="1731108467003" duration="22000" />
       <workItem from="1731108506501" duration="3816000" />
+      <workItem from="1732628984099" duration="62000" />
+      <workItem from="1732629101600" duration="11744000" />
     </task>
     <task id="LOCAL-00001" summary="Remade ui, added nav, main, infinite scroll for projects, working on timeline">
       <option name="closed" value="true" />
@@ -285,7 +291,39 @@
       <option name="project" value="LOCAL" />
       <updated>1731112203322</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed some issues">
+      <option name="closed" value="true" />
+      <created>1731113493885</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731113493885</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Adding .gitignore">
+      <option name="closed" value="true" />
+      <created>1732650374294</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732650374294</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Disabling database functions, so I can fix it">
+      <option name="closed" value="true" />
+      <created>1732922420194</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732922420194</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed few issues">
+      <option name="closed" value="true" />
+      <created>1732922862988</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732922862988</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +343,10 @@
     <MESSAGE value="Updated docker-compose.yml" />
     <MESSAGE value="Fixed card component, working on mobile navigation bar" />
     <MESSAGE value="Got rid of timeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got rid of timeline" />
+    <MESSAGE value="Fixed some issues" />
+    <MESSAGE value="Adding .gitignore" />
+    <MESSAGE value="Disabling database functions, so I can fix it" />
+    <MESSAGE value="Fixed few issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed few issues" />
   </component>
 </project>

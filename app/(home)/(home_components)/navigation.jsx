@@ -1,10 +1,9 @@
 "use client";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
-import {faX} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import {useState} from "react";
+import {faBars, faX} from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation() {
 
@@ -14,8 +13,7 @@ export default function Navigation() {
         setIsOpened(!isOpened);
     }
 
-    return <>
-        <nav>
+    return <nav>
             <button type="button" className={"faBars"} onClick={handleClick}>
                 <FontAwesomeIcon icon={faBars}/>
             </button>
@@ -28,5 +26,4 @@ export default function Navigation() {
                 <li onClick={handleClick}><Link href="/contact">Contact</Link></li>
             </ul>
         </nav>
-    </>
 }

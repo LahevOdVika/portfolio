@@ -57,7 +57,6 @@ export async function POST(request) {
 
 export async function GET() {
     const query = 'SELECT * FROM projects ORDER BY ID DESC LIMIT 6';
-
     try {
         const result = await db.query(query);
         return NextResponse.json(result.rows);

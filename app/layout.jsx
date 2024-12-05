@@ -21,7 +21,9 @@ export default function RootLayout({children}) {
                 </div>
                 <Navigation />
             </header>
-            {children}
+            <div className="wrapper">
+              {children}
+            </div>
             </body>
         </html>
 }

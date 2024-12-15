@@ -3,7 +3,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import * as icon from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHouse, faSuitcase, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navigation() {
 
@@ -25,25 +25,26 @@ export default function Navigation() {
   });
 
   return <nav ref={menuRef}>
+    # skipcq: JS-0417
     <button type="button" className={'faBars'} onClick={handleClick}>
-      <FontAwesomeIcon icon={icon.faBars} />
+      <FontAwesomeIcon icon={faBars} />
     </button>
     <ul className={'menu'} data-opened={isOpened}>
-      <li onClick={handleClick}>
+      <li>
         <Link href="/">
-          <FontAwesomeIcon icon={icon.faHouse} style={{ marginRight: '10px' }} />
+          <FontAwesomeIcon icon={faHouse} style={{ marginRight: '10px' }} />
           Home
         </Link>
       </li>
-      <li onClick={handleClick}>
+      <li>
         <Link href="/">
-          <FontAwesomeIcon icon={icon.faSuitcase} style={{ marginRight: '10px' }} />
+          <FontAwesomeIcon icon={faSuitcase} style={{ marginRight: '10px' }} />
           My Work
         </Link>
       </li>
-      <li onClick={handleClick}>
+      <li>
         <Link href="/contact">
-          <FontAwesomeIcon icon={icon.faPhone} style={{ marginRight: '10px' }} />
+          <FontAwesomeIcon icon={faPhone} style={{ marginRight: '10px' }} />
           Contact
         </Link>
       </li>

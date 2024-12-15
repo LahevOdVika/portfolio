@@ -4,7 +4,9 @@ import styles from "@/app/(home)/page.module.css";
 import Card from "@/app/(components)/card";
 import {useState, useEffect} from "react";
 
-export default function CardCarousel({projects}) {
+export default function CardCarousel() {
+
+    const projects = []
 
     const [isMobile, setIsMobile] = useState(false);
 

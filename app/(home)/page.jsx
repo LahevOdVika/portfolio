@@ -31,7 +31,7 @@ export default function Page() {
                     priority
                 />
             </main>
-            <CardCarousel projects={projects}/>
+            <CardCarousel/>
             <Facts />
     </>
 }

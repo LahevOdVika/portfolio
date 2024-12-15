@@ -25,7 +25,7 @@ export default function Navigation() {
   });
 
   return <nav ref={menuRef}>
-    {/* skipcq: JS-0417 */}
+    {/* skipcq */}
     <button type="button" className={'faBars'} onClick={handleClick}>
       <FontAwesomeIcon icon={faBars} />
     </button>

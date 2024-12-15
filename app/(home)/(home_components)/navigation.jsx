@@ -24,8 +24,8 @@ export default function Navigation() {
     document.addEventListener('click', handleClose);
   });
 
-  //skipcq: JS-0417
   return <nav ref={menuRef}>
+    {/* skipcq: JS-0417 */}
     <button type="button" className={'faBars'} onClick={handleClick}>
       <FontAwesomeIcon icon={faBars} />
     </button>

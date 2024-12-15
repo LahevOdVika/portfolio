@@ -3,12 +3,13 @@
     --bg-dark: #121212;
     --primary: #007777;
     --primary-light: #2A7CA6;
-    --secondary: #FF8C42;
+    --secondary: #414B5A;
     --text: #E5E5E5;
     --text-title: #FFFFFF;
     --card-hover-px: 20px;
     --card-border-radius: 5px;
-    --mobile-font-size: 25px;
+    --mobile-font-size: 1.1em;
+    --backdrop-blur: 50px;
     box-sizing: border-box;
 
     interpolate-size: allow-keywords;
@@ -30,7 +31,7 @@ body {
     color: #f2f2f2 !important;
     font-size: 19px;
     display: grid;
-    grid-template-rows: 10% auto;
+    grid-template-rows: 8% auto;
 }
 
 .wrapper {
@@ -45,15 +46,17 @@ img {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    font-size: 20px;
-    background: var(--bg-dark);
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
     padding-inline: 1rem;
+}
+
+body[data-scroll] header {
+    backdrop-filter: blur(var(--backdrop-blur));
 }
 
 .copyright {
@@ -64,6 +67,7 @@ header {
     list-style-type: none;
     display: flex;
     gap: 1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 header a {
@@ -84,17 +88,18 @@ header a:hover::after {
     width: 100%;
 }
 
-.faBars, .faX {
+.faBars {
     background: none;
     color: #fffff0;
     transition: all .1s ease-in-out;
     border: 1px solid transparent;
     border-radius: 2px;
+    padding: 5px 10px;
     display: none;
 }
 
-.faBars:focus, .faX:focus {
-    border: 1px solid var(--primary);
+.faBars:focus {
+    border: 1px solid var(--secondary);
 }
 
 @media only screen and (width <= 800px) {
@@ -103,7 +108,11 @@ header a:hover::after {
     }
 
     header {
-        font-size: 1rem;
+        backdrop-filter: none !important;
+    }
+
+    body[data-scroll] header {
+        background: black;
     }
 
     .menu {
@@ -112,19 +121,16 @@ header a:hover::after {
         top: 0;
         z-index: 998;
         display: block;
+        transform: translateX(100%);
 
-        background: var(--bg-dark);
+        backdrop-filter: blur(var(--backdrop-blur));
         height: 100%;
-        width: 0;
-        visibility: hidden;
-
-        overflow: clip;
+        overflow-x: clip;
 
         margin: 0;
-        padding: 15% 0 0 0;
+        padding: 15% 5% 0 5%;
         box-sizing: border-box;
         text-align: end;
-
         transition: all .3s ease-in-out;
     }
 
@@ -134,9 +140,7 @@ header a:hover::after {
     }
 
     .menu[data-opened="true"] {
-        visibility: visible;
-        width: auto;
-        padding: 15% 5% 0 5%;
+        transform: translateX(0);
     }
 
     .faBars {

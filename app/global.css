@@ -11,8 +11,6 @@
     --mobile-font-size: 1.1em;
     --backdrop-blur: 50px;
     box-sizing: border-box;
-
-    interpolate-size: allow-keywords;
 }
 
 html,
@@ -53,6 +51,7 @@ header {
     left: 0;
     right: 0;
     padding-inline: 1rem;
+    transition: all .2s ease-in-out;
 }
 
 body[data-scroll] header {
@@ -122,6 +121,8 @@ header a:hover::after {
         z-index: 998;
         display: block;
         transform: translateX(100%);
+        max-width: fit-content;
+        width: 100%;
 
         backdrop-filter: blur(var(--backdrop-blur));
         height: 100%;

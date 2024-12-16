@@ -14,7 +14,7 @@ export default function Navigation() {
     setIsOpened(!isOpened);
   };
 
-  const handleClose = () => {
+  const handleClose = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setIsOpened(false);
     }
@@ -22,11 +22,13 @@ export default function Navigation() {
 
   useEffect(() => {
     document.addEventListener('click', handleClose);
-  });
+    return () =>
+      document.removeEventListener('click', handleClose);
+  }, []);
 
   return <nav ref={menuRef}>
     {/* skipcq */}
-    <button type="button" className={'faBars'} onClick={handleClick}>
+    <button type="button" className={'faBars'} onClick={handleClick} aria-expanded={isOpened} aria-controls="navigation-menu">
       <FontAwesomeIcon icon={faBars} />
     </button>
     <ul className={'menu'} data-opened={isOpened}>

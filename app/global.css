@@ -95,6 +95,10 @@ header a:hover::after {
     border-radius: 2px;
     padding: 5px 10px;
     display: none;
+    z-index: 101;
+    position: relative;
+    font-size: var(--mobile-font-size);
+    cursor: pointer;
 }
 
 .faBars:focus {
@@ -146,8 +150,5 @@ header a:hover::after {
 
     .faBars {
         display: block;
-        font-size: var(--mobile-font-size);
-        z-index: 999;
-        position: relative;
     }
 }

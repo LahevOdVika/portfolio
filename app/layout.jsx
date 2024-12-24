@@ -1,5 +1,5 @@
 import './global.css';
-import Navigation from "@/app/(home)/(home_components)/navigation";
+import Navigation from "@/app/(components)/navigation";
 
 export const metadata = {
     title: "Michal Budai",

@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import {useState} from "react";
 import {faBars, faX} from "@fortawesome/free-solid-svg-icons";
+import styles from "./navbar.module.css";
 
 export default function Navigation() {
 
@@ -14,15 +15,15 @@ export default function Navigation() {
     }
 
     return <nav>
-            <button type="button" className={"faBars"} onClick={handleClick}>
+            <button type="button" className={styles.faBars} onClick={handleClick}>
                 <FontAwesomeIcon icon={faBars}/>
             </button>
-            <ul className={"menu"} data-opened={isOpened}>
-                <button type="button" className="faX" onClick={handleClick}>
+            <ul className={styles.menu} data-opened={isOpened}>
+                <button type="button" className={styles.faX} onClick={handleClick}>
                     <FontAwesomeIcon icon={faX}/>
                 </button>
-                <li onClick={handleClick}><Link href="/">Home</Link></li>
-                <li onClick={handleClick}><Link href="/">My Work</Link></li>
+                <li onClick={handleClick}><Link href="/public">Home</Link></li>
+                <li onClick={handleClick}><Link href="/public">My Work</Link></li>
                 <li onClick={handleClick}><Link href="/contact">Contact</Link></li>
             </ul>
         </nav>

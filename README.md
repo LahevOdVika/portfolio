@@ -12,7 +12,7 @@ Welcome to my Next.js portfolio! 🎉 This repository contains the code for my p
 
 ### Prerequisites 📋
 Ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (>= 22.x) ✅
+- [Node.js](https://nodejs.org/) (>= 18.x) ✅
 - [npm](https://www.npmjs.com/) ✅
 
 ### Installation 📂
@@ -43,14 +43,14 @@ Ensure you have the following installed:
 
 ```
 .
-├── app           # Static assets like images and favicon
-    ├── components   # Reusable React components
+├── app           # Next.js app directory (App Router)
+    ├── (components)   # Reusable React components
     ├── (home)       # Home page components
     ├── projects     # Projects page components
     ├── contact      # Contact page components
     ├── api          # API routes for dynamic content
 ├── public           # Static files (e.g., images, favicons)
-├── init            # Initial SQL scripts
+├── init             # Initial SQL scripts
 ├── package.json     # Project metadata and dependencies
 └── README.md        # Project documentation
 ```
@@ -72,12 +72,6 @@ Global components are in the root of `app` directory:
 - `layout.jsx` 📐
 - `global.css` 🎨
 
-### Data 📊
-Static content, like projects and skills, is stored in the `data` directory:
-- Projects 🛠️
-- Skills 🎯
-- Contact information 📞
-
 ### Styles 🎨
 Global styles are in `styles/globals.css`. You can customize or add new styles in the `styles` directory to align with my personal branding. ✍️
 
@@ -85,9 +79,7 @@ Global styles are in `styles/globals.css`. You can customize or add new styles i
 
 1. Build the production version of the site:
    ```bash
-   npm run build
-   # or
-   yarn build
+   next build
    ```
 
 2. Deploy the `out` directory to your preferred hosting platform:

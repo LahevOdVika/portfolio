@@ -25,7 +25,7 @@ export default function CardCarousel({projects}) {
                 </section>
         } else if (projectCountBool) {
             return <section className={styles.cards}>
-                    <div className={styles.cardSlider} data-animate={true}>
+                    <div className={styles.cardSlider} data-animate>
                         {projects.map(project => {
                             return <Card key={project.id} imageUrl={project.image_path} imageAlt={project.address}
                                          header={project.address}

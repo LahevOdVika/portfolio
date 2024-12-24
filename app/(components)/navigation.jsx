@@ -22,9 +22,7 @@ export default function Navigation() {
                 <button type="button" className={styles.faX} onClick={handleClick}>
                     <FontAwesomeIcon icon={faX}/>
                 </button>
-                <li onClick={handleClick}><Link href="/public">Home</Link></li>
-                <li onClick={handleClick}><Link href="/public">My Work</Link></li>
-                <li onClick={handleClick}><Link href="/contact">Contact</Link></li>
+
             </ul>
         </nav>
 }

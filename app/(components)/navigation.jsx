@@ -1,28 +1,55 @@
-"use client";
+'use client';
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import Link from "next/link";
-import {useState} from "react";
-import {faBars, faX} from "@fortawesome/free-solid-svg-icons";
-import styles from "./navbar.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import { faBars, faHouse, faSuitcase, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navigation() {
 
-    const [isOpened, setIsOpened] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
+  const menuRef = useRef(null);
 
-    const handleClick = () => {
-        setIsOpened(!isOpened);
+  const handleClick = () => {
+    setIsOpened(!isOpened);
+  };
+
+  const handleClose = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpened(false);
     }
+  }
 
-    return <nav>
-            <button type="button" className={styles.faBars} onClick={handleClick}>
-                <FontAwesomeIcon icon={faBars}/>
-            </button>
-            <ul className={styles.menu} data-opened={isOpened}>
-                <button type="button" className={styles.faX} onClick={handleClick}>
-                    <FontAwesomeIcon icon={faX}/>
-                </button>
+  useEffect(() => {
+    document.addEventListener('click', handleClose);
+    return () =>
+      document.removeEventListener('click', handleClose);
+  }, []);
 
-            </ul>
-        </nav>
+  return <nav ref={menuRef}>
+    {/* skipcq */}
+    <button type="button" className={'faBars'} onClick={handleClick} aria-expanded={isOpened} aria-controls="navigation-menu">
+      <FontAwesomeIcon icon={faBars} />
+    </button>
+    <ul className={'menu'} data-opened={isOpened}>
+      <li>
+        <Link href="/">
+          <FontAwesomeIcon icon={faHouse} style={{ marginRight: '10px' }} />
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link href="/">
+          <FontAwesomeIcon icon={faSuitcase} style={{ marginRight: '10px' }} />
+          My Work
+        </Link>
+      </li>
+      <li>
+        <Link href="/contact">
+          <FontAwesomeIcon icon={faPhone} style={{ marginRight: '10px' }} />
+          Contact
+        </Link>
+      </li>
+    </ul>
+  </nav>;
 }

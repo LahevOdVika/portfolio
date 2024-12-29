@@ -3,12 +3,13 @@
     --bg-dark: #121212;
     --primary: #007777;
     --primary-light: #2A7CA6;
-    --secondary: #FF8C42;
+    --secondary: #414B5A;
     --text: #E5E5E5;
     --text-title: #FFFFFF;
     --card-hover-px: 20px;
     --card-border-radius: 5px;
-
+    --mobile-font-size: 1.1em;
+    --backdrop-blur: 50px;
     box-sizing: border-box;
 }
 
@@ -24,10 +25,15 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: Ubuntu, "Ubuntu Mono", monospace;
-    padding: 10px 25px 10px 25px;
     margin: 0;
     color: #f2f2f2 !important;
     font-size: 19px;
+    display: grid;
+    grid-template-rows: 8% auto;
+}
+
+.wrapper {
+    padding: 10px 25px 10px 25px;
 }
 
 img {
@@ -38,9 +44,29 @@ img {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    font-size: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-inline: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+body[data-scroll] header {
+    backdrop-filter: blur(var(--backdrop-blur));
+}
+
+.copyright {
+    font-size: var(--mobile-font-size);
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 header a {
@@ -59,4 +85,70 @@ header a::after {
 
 header a:hover::after {
     width: 100%;
+}
+
+.faBars {
+    background: none;
+    color: #fffff0;
+    transition: all .1s ease-in-out;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 5px 10px;
+    display: none;
+    z-index: 101;
+    position: relative;
+    font-size: var(--mobile-font-size);
+    cursor: pointer;
+}
+
+.faBars:focus {
+    border: 1px solid var(--secondary);
+}
+
+@media only screen and (width <= 800px) {
+    .wrapper {
+        padding: 10px 20px;
+    }
+
+    header {
+        backdrop-filter: none !important;
+    }
+
+    body[data-scroll] header {
+        background: black;
+    }
+
+    .menu {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 998;
+        display: block;
+        transform: translateX(100%);
+        max-width: fit-content;
+        width: 100%;
+
+        backdrop-filter: blur(var(--backdrop-blur));
+        height: 100%;
+        overflow-x: clip;
+
+        margin: 0;
+        padding: 15% 5% 0 5%;
+        box-sizing: border-box;
+        text-align: end;
+        transition: all .3s ease-in-out;
+    }
+
+    .menu * {
+        margin-top: 10px;
+        font-size: var(--mobile-font-size);
+    }
+
+    .menu[data-opened="true"] {
+        transform: translateX(0);
+    }
+
+    .faBars {
+        display: block;
+    }
 }

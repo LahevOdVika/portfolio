@@ -1,9 +1,10 @@
 import styles from './page.module.css';
 import Image from 'next/image'
-import Facts from "@/app/(components)/facts";
-import CardCarousel from "@/app/(components)/card-carousel";
+import Facts from "@/app/(components)/facts.jsx";
+import CardCarousel from "@/app/(components)/card-carousel.jsx";
 
 export default function Page() {
+
     // async
     /*const projects = await fetch('http://localhost:3000/api')
         .then(response => {
@@ -15,7 +16,7 @@ export default function Page() {
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
         });*/
-        const projects = [];
+
     return <>
             <main className={styles.welcome}>
                 <div className="container">
@@ -30,7 +31,7 @@ export default function Page() {
                     priority
                 />
             </main>
-            <CardCarousel projects={projects}/>
+            <CardCarousel/>
             <Facts />
     </>
 }

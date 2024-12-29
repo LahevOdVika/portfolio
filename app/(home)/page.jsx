@@ -1,7 +1,7 @@
 import styles from './page.module.css';
 import Image from 'next/image'
-import Facts from "@/app/(home)/(home_components)/facts";
-import CardCarousel from "@/app/(home)/(home_components)/card-carousel";
+import Facts from "@/app/(components)/facts.jsx";
+import CardCarousel from "@/app/(components)/card-carousel.jsx";
 
 export default function Page() {
 

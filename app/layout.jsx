@@ -1,5 +1,5 @@
 import './global.css';
-import Navigation from "@/app/(home)/(home_components)/navigation";
+import Navigation from "@/app/(components)/navigation";
 
 export const metadata = {
     title: "Michal Budai",
@@ -8,7 +8,7 @@ export const metadata = {
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import ScrollListener from '@/app/(home)/(home_components)/ScrollListener';
+import ScrollListener from '@/app/(components)/ScrollListener';
 config.autoAddCss = false
 
 export default function RootLayout({children}) {

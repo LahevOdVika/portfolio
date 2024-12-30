@@ -5,7 +5,10 @@ import Card from "@/app/(components)/card";
 
 export default function Facts() {
     return <section className={styles.facts}>
-            <Card imageUrl={"/timeline/Langs.svg"} imageAlt={"Programming languages I use"} text={"I code everything myself, no website builders, no AI builders"} className={styles.factsCard}/>
-            <Card imageUrl={"/timeline/Utils.svg"} imageAlt={"Programs I use to code"} text={"Using only the best tools on the market"} className={styles.factsCard}/>
+          <h2>Some facts about me</h2>
+          <div className={styles.factsGrid}>
+            <Card className={styles.factsCard} header="Experience" text="I have been working as a developer for over 5 years." imageUrl={'/experience.svg'} imageAlt={"Experience"}/>
+            <Card className={styles.factsCard} header="Skills" text="I work with JavaScript, React, and Node.js." imageUrl={'/genius.svg'} imageAlt={"Skills"}/>
+          </div>
         </section>
 }

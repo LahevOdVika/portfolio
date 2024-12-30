@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Fixed few issues">
-      <change beforePath="$PROJECT_DIR$/.next/server/app-paths-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app-paths-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/server-reference-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/server-reference-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/server-reference-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/server-reference-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(components)/navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(components)/navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/navigation.jsx" afterDir="false" />
+    <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Changed images, polishing card component and facts grid">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(components)/card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(components)/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/card.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(components)/facts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/facts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(home)/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="navigation-bar" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,7 +68,7 @@
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "facts-part",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/home/lahev/Desktop/portfolio",
     "list.type.of.created.stylesheet": "CSS",
@@ -330,7 +329,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732922862988</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Few changes to navbar.module.css">
+      <option name="closed" value="true" />
+      <created>1735567040571</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735567040571</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Changed images, polishing card component and facts grid">
+      <option name="closed" value="true" />
+      <created>1735568624691</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1735568624691</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +369,8 @@
     <MESSAGE value="Adding .gitignore" />
     <MESSAGE value="Disabling database functions, so I can fix it" />
     <MESSAGE value="Fixed few issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed few issues" />
+    <MESSAGE value="Few changes to navbar.module.css" />
+    <MESSAGE value="Changed images, polishing card component and facts grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed images, polishing card component and facts grid" />
   </component>
 </project>

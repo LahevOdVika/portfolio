@@ -20,9 +20,9 @@ export default function Card({imageUrl, imageAlt, header, text, className}) {
         </div>
         <div className={styles.cardBody}>
             <h3 className={styles.cardTitle}>{header}</h3>
-            <p className={styles.cardP}>
+            <span className={styles.cardP}>
                 {text}
-            </p>
+            </span>
         </div>
     </div>
 }

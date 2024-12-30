@@ -7,32 +7,29 @@
     border-radius: var(--card-border-radius);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Zamezení prázdnému místu */
+    justify-content: space-between;
     transition: all .2s ease-in-out;
-    height: 100%; /* Zajistí, že karta má správnou výšku */
+    height: 100%;
     box-sizing: border-box;
     scroll-snap-align: center;
     width: max-content;
-    outline: var(--primary) solid 2px;
-    z-index: 10;
+    outline: var(--secondary) solid 1px;
 }
 
 .cardImageWrapper {
-    flex: 1; /* Zabírá proporční část dostupné výšky */
-    height: auto; /* Zamezení prázdnému prostoru */
+    flex: 1;
+    height: auto;
     border-radius: var(--card-border-radius);
 }
 
 .cardImg {
-    width: 100%; /* Obrázek pokryje celý wrapper */
-    height: 100%;
-    object-fit: cover; /* Zajištění správného přizpůsobení obrázku */
+    object-fit: cover;
     border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
 }
 
 .cardBody {
     padding-inline: .5rem;
-    flex-shrink: 0; /* Zamezí zmenšování */
+    flex-shrink: 0;
 }
 
 .cardTitle {
@@ -43,7 +40,10 @@
 .cardP {
     font-size: 1rem;
     line-height: 1.3;
-    margin: 0; /* Odstranění marginu, který přidává prostor */
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .card::before {
@@ -70,16 +70,7 @@
 
 @media only screen and (width <= 800px) {
     .card {
-        min-width: 100%;
-    }
-
-    .cardImg {
-        width: 100%;
-    }
-
-    .card:hover {
-        transform: none;
-        border: var(--primary) solid 2px;
+        max-width: 100%;
     }
 
     .card::before {

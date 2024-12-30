@@ -52,27 +52,26 @@
 }
 
 .facts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    text-align: center;
 }
 
 .factsCard {
     transform: none !important;
     text-align: center;
-}
-
-.factsCard img {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
+    background: transparent !important;
+    outline: none !important;
 }
 
 .factsCard::before {
     display: none;
 }
 
+.factsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    gap: 1rem;
+    justify-content: center;
+}
 
 @media only screen and (width <= 800px) {
     .welcome {

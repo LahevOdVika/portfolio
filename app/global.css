@@ -62,12 +62,6 @@ body[data-scroll] header {
     font-size: var(--mobile-font-size);
 }
 
-.menu {
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
-}
 
 header a {
     color: inherit;
@@ -87,23 +81,6 @@ header a:hover::after {
     width: 100%;
 }
 
-.faBars {
-    background: none;
-    color: #fffff0;
-    transition: all .1s ease-in-out;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    padding: 5px 10px;
-    display: none;
-    z-index: 101;
-    position: relative;
-    font-size: var(--mobile-font-size);
-    cursor: pointer;
-}
-
-.faBars:focus {
-    border: 1px solid var(--secondary);
-}
 
 @media only screen and (width <= 800px) {
     .wrapper {
@@ -118,37 +95,4 @@ header a:hover::after {
         background: black;
     }
 
-    .menu {
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 998;
-        display: block;
-        transform: translateX(100%);
-        max-width: fit-content;
-        width: 100%;
-
-        backdrop-filter: blur(var(--backdrop-blur));
-        height: 100%;
-        overflow-x: clip;
-
-        margin: 0;
-        padding: 15% 5% 0 5%;
-        box-sizing: border-box;
-        text-align: end;
-        transition: all .3s ease-in-out;
-    }
-
-    .menu * {
-        margin-top: 10px;
-        font-size: var(--mobile-font-size);
-    }
-
-    .menu[data-opened="true"] {
-        transform: translateX(0);
-    }
-
-    .faBars {
-        display: block;
-    }
 }

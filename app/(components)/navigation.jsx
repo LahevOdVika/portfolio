@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { faBars, faHouse, faSuitcase, faPhone } from '@fortawesome/free-solid-svg-icons';
+import styles from './navbar.module.css';
 
 export default function Navigation() {
 
@@ -28,10 +29,10 @@ export default function Navigation() {
 
   return <nav ref={menuRef}>
     {/* skipcq */}
-    <button type="button" className={'faBars'} onClick={handleClick} aria-expanded={isOpened} aria-controls="navigation-menu">
+    <button type="button" className={styles.faBars} onClick={handleClick} aria-expanded={isOpened} aria-controls="navigation-menu">
       <FontAwesomeIcon icon={faBars} />
     </button>
-    <ul className={'menu'} data-opened={isOpened}>
+    <ul className={styles.menu} data-opened={isOpened}>
       <li>
         <Link href="/">
           <FontAwesomeIcon icon={faHouse} style={{ marginRight: '10px' }} />

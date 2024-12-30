@@ -68,9 +68,9 @@
 
 .factsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
     gap: 1rem;
-    justify-items: center;
+    justify-content: center;
 }
 
 @media only screen and (width <= 800px) {

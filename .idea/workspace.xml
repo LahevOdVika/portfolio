@@ -6,27 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fc43efe5-8096-4b79-9817-838591106c4d" name="Changes" comment="Changed images, polishing card component and facts grid">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(components)/card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/card.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(components)/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/card.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(components)/facts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(components)/facts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(home)/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/JetBrainsPHP.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/JetBrainsPycharm.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/JetBrainsRider.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/csharp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/html.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascript.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/php.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/timeline/Code.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/timeline/Langs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/timeline/LineBottom.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/timeline/LineMiddle.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/timeline/LineTop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/timeline/Terminal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/timeline/Utils.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/visual studio.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vscode.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735567040571</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Changed images, polishing card component and facts grid">
+      <option name="closed" value="true" />
+      <created>1735568624691</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1735568624691</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

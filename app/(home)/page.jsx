@@ -24,7 +24,7 @@ export default function Page() {
                     <h2>I&apos;m a junior &quot;full stack&quot; web, desktop and mobile developer</h2>
                 </div>
                 <Image
-                    src="/image.png"
+                    src="/project.svg"
                     alt="Welcome image"
                     width={500}
                     height={500}
